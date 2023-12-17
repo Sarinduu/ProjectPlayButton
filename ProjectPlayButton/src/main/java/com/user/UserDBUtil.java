@@ -34,8 +34,8 @@ public class UserDBUtil {
 				String pword = rs.getString(4);
 				String profilePicLink = rs.getString(5);
 				String coverPicLink = rs.getString(6);
-				String birthday = rs.getString(6);
-				String gender = rs.getString(6);
+				String birthday = rs.getString(7);
+				String gender = rs.getString(8);
 
 				
 				User user1 = new User(id,email,uname,pword,profilePicLink,coverPicLink,birthday,gender);
