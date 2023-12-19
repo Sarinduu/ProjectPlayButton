@@ -65,7 +65,16 @@
             <button type="submit">Login</button>
         </div>
     </form>
+    
+    <button onclick="redirectToPage2()">Go to Page 2</button>
+    
 </div>
+
+ <script>
+        function redirectToPage2() {
+            window.location.href = "Register.jsp";
+        }
+    </script>
 
 </body>
 </html>
