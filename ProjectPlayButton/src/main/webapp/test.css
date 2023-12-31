@@ -1,9 +1,36 @@
 @charset "UTF-8";
 
-.gg{
-	display: flex;
-	
-	justify-content: center;
-	align-content: center;
+ body {
+            margin: 0;
+            overflow: hidden;
+        }
 
-}
+        .sun {
+            width: 100px;
+            height: 100px;
+            background-color: #ffcc00;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -50px;
+            margin-left: -50px;
+        }
+
+        .planet {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            position: absolute;
+            animation: rotatePlanet linear infinite;
+        }
+
+        .mercury { background-color: #bfbfbf; top: 15%; left: 50%; margin-top: -20px; margin-left: -20px; animation-duration: 3s; }
+        .venus   { background-color: #ffcc66; top: 30%; left: 50%; margin-top: -40px; margin-left: -40px; animation-duration: 7s; }
+        .earth   { background-color: #3399ff; top: 45%; left: 50%; margin-top: -40px; margin-left: -40px; animation-duration: 12s; }
+        .mars    { background-color: #ff6666; top: 60%; left: 50%; margin-top: -30px; margin-left: -30px; animation-duration: 20s; }
+        
+        @keyframes rotatePlanet {
+            from { transform: rotate(0deg); }
+            to   { transform: rotate(360deg); }
+        }

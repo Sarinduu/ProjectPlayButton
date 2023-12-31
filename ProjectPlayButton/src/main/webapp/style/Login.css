@@ -1,0 +1,137 @@
+@charset "UTF-8";
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    padding: 50px;
+    background-image: url("../imagers/loginbackground2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+   
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-container {
+	position: relative;
+	width: 380px;
+	height: 420px;
+	background: transparent;
+	border-radius: 8px; 
+	overflow: hidden;
+	 -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
+}
+
+.login-container::before{
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg, transparent,transparent,#eb3434,#eb3434,#eb3434);
+	transform-origin: bottom right;
+	z-index: 1;
+	animation: animate 10s linear infinite;
+}
+
+.login-container::after{
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg, transparent,transparent,#45f3ff,#45f3ff,#45f3ff);
+	transform-origin: bottom right;
+	z-index: 1;
+	animation: animate 10s linear infinite;
+	animation-delay: -5s;
+}
+
+.login-container form {
+	position: absolute;
+	inset: 4px;
+	background: #ffffff;
+	padding: 50px, 40px;
+	border-radius: 8px;
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+}
+.line{
+	position: absolute;
+	top: 0;
+	inset: 0;
+}
+.line::before{
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg, transparent,transparent,#343aeb,#343aeb,#343aeb);
+	transform-origin: bottom right;
+	z-index: 1;
+	animation: animate 10s linear infinite;
+	animation-delay: -2.5s;
+}
+
+.line::after{
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg, transparent,transparent,#ff2770,#ff2770,#ff2770);
+	transform-origin: bottom right;
+	z-index: 1;
+	animation: animate 10s linear infinite;
+	animation-delay: -7.5s;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+.form-group label {
+    display: block;
+    font-weight: bold;
+   
+    margin-bottom: 5px;
+}
+.form-group input {
+    width: 80%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form-group button {
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: none;
+    background-color: #4caf50;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+ @keyframes animate {
+            0% {
+                transform: rotate(0deg) ;
+            }
+            100% {
+                transform: rotate(360deg) ;
+            }
+        }
+
+
+
+       

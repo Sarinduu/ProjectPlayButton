@@ -1,5 +1,6 @@
 package com.user;
 
+import java.io.Console;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -50,5 +51,39 @@ public class UserDBUtil {
 		return userlist;
 		
 	}
+	
+	
+	public static boolean insertuser(String email, String username, String password) {
+    	
+    	boolean isSuccess = false;
+    	
+    	String url = "jdbc:mysql://localhost:3306/playButtonDB";
+		String dbusername = "root";
+		String dbpassword = "root1234";
+    	
+    	try {
+    		Class.forName("com.mysql.jdbc.Driver");
+    		
+    		Connection con = DriverManager.getConnection(url,dbusername,dbpassword);
+			Statement stmt = con.createStatement();
+    	    String sql = "insert into user (id, email, username, password) values (0,'"+email+"','"+username+"','"+password+"')";
+    		int rs = stmt.executeUpdate(sql);
+    		
+    		if(rs > 0) {
+    			isSuccess = true;
+    			System.out.println("udb error 1");
+    		} else {
+    			isSuccess = false;
+    			System.out.println("udb error 2");
+    		}
+    		
+    	}
+    	catch (Exception e) {
+    		e.printStackTrace();
+    		System.out.println("db error = "+ e);
+    	}
+ 	
+    	return isSuccess;
+    }
 
 } 
